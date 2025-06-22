@@ -1,5 +1,6 @@
 import csv
 import logging
+import os
 import random
 import time
 from typing import Counter, Optional
@@ -205,6 +206,9 @@ def main():
         filename="douban.log",
         encoding="utf-8",
     )
+    image_dir = "film_img"
+    if not os.path.exists(image_dir):
+        os.makedirs(image_dir)
     write_csv_header()
     for page in track(range(10)):
         handle_one_page(page)
