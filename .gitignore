@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Movie posters
+film_img/*
+!film_img/
+
+# Log file
+*.log
+
+# CSV file
+douban.csv
+
+# Data analysing result
+douban.png
