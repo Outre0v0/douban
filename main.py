@@ -7,6 +7,7 @@ from typing import Counter, Optional
 
 import requests
 from bs4 import BeautifulSoup
+from fake_useragent import UserAgent
 from matplotlib import pyplot as plt
 from rich.progress import track
 
@@ -41,7 +42,7 @@ def get_headers() -> dict:
         dict: 请求头
     """
     return {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0"
+        "User-Agent": UserAgent().random,
     }
 
 
